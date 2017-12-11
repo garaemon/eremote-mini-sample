@@ -11,24 +11,14 @@
 from setuptools import setup, find_packages
 from eremote_mini_sample import __version__
 
-tests_require = [
-    'mock',
-    'nose',
-    'coverage',
-    'yanc',
-    'preggy',
-    'tox',
-    'ipdb',
-    'coveralls',
-    'sphinx',
-]
+tests_require = ['pylint']
 
 setup(
     name='eremote-mini-sample',
     version=__version__,
-    description='an incredible python package',
+    description='A collection of sample script for eremote mini',
     long_description='''
-an incredible python package
+A collection of sample script for eremote mini.
 ''',
     keywords='',
     author='Ryohei Ueda',
@@ -51,6 +41,8 @@ an incredible python package
     install_requires=[
         # add your dependencies here
         # remember to use 'package-name>=x.y.z,<x.y+1.0' notation (this way you get bugfixes)
+        'broadlink',
+        'fire'
     ],
     extras_require={
         'tests': tests_require,
